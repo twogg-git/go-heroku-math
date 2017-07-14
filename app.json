@@ -1,0 +1,13 @@
+{
+  "name": "GO Math testing",
+  "description": "Example App",
+  "keywords": [
+    "math",
+    "go",
+    "example"
+  ],
+  "image": "heroku/go:1.6",
+  "mount_dir": "src/github.com/twogg-git/go-heroku-math",
+  "website": "http://github.com/twogg-git/go-heroku-math",
+  "repository": "http://github.com/twogg-git/go-heroku-math"
+}
