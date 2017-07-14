@@ -6,21 +6,11 @@ import (
 	"os"
   	"time"
 	"math/rand"
-  	"github.com/gonum/stat"	
-  	"github.com/montanaflynn/stats"
+  	"github.com/gonum/stat"
 )
 
-type Response1 struct {
-    Page   int
-    Fruits []string
-}
-type Response2 struct {
-    Page   int      `json:"page"`
-    Fruits []string `json:"fruits"`
-}
-
 func main() {
-	http.HandleFunc("/", hello)
+	http.HandleFunc("/", mathTest)
 	fmt.Println("listening...")
 	err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 	if err != nil {
@@ -28,7 +18,7 @@ func main() {
 	}
 }
 
-func hello(res http.ResponseWriter, req *http.Request) {
+func mathTest(res http.ResponseWriter, req *http.Request) {
 	
   	fmt.Fprintln(res, "Hello, datapool testing")
   

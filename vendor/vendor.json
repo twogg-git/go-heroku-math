@@ -3,7 +3,7 @@
 	"ignore": "test",
 	"package": [
 		{
-          	"path": "github.com/montanaflynn/stats"
+          	"path": "github.com/gonum/stat"
 		}
 	],
 	"rootPath": "github.com/twogg-git/go-heroku-math"
