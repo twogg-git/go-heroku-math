@@ -1,6 +1,7 @@
-FR
+FROM alpine:latest
 
 WORKDIR "/opt"
 
-ADD .docker_build/go-getting-started /opt/bin/go-getting-started
-ADD ./templates /opt/
+ADD .docker_build/go-heroku-math /opt/bin/go-heroku-math
+
+CMD
