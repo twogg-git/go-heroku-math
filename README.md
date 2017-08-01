@@ -1,2 +1,2 @@
-# go-heroku-math
-Some math calculations over a file deplyed with heroku
+# go-math
+Some math calculations testing
