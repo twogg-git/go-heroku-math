@@ -9,22 +9,20 @@ import (
 
 func main() {
 
-	// I dont want to do this
-	//dataPool := []float64{rand.Float64(), rand.Float64(), rand.Float64(), rand.Float64()}
-
-	// Instead i want to use rand.Float64() to fill the DataPool, like 100 Float64 numbers
-
-	var dataPool [100]float64
-	for i := 0; i < 100; i++ {
+	poolSize := 10000
+	var dataPool = make([]float64, poolSize)
+	for i := 0; i < poolSize; i++ {
 		dataPool[i] = rand.Float64()
 	}
-
-	// stat.Mean only calculates over []float64 arrays
+	
 	mean := stat.Mean(dataPool, nil)
 	fmt.Println("Mean value", mean)
 
-	fmt.Println("DataPool...")
+	stddev := stat.StdDev(dataPool, nil)
+	fmt.Println("Standar deviation", stddev)
+
+	/*fmt.Println("DataPool...")
 	for i := 0; i < len(dataPool); i++ {
 		fmt.Println(dataPool[i])
-	}
+	}*/
 }
