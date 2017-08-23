@@ -4,7 +4,7 @@ ADD /main.go /go/src/gomath/
 
 WORKDIR /go/src/gomath/
 
-RUN go get github.com/gonum/stat
+RUN go get -v .
 
 RUN go install gomath
 
