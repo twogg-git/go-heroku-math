@@ -11,7 +11,7 @@ import (
 func main() {
 	http.HandleFunc("/", statTest)
 	fmt.Println("listening...")
-	err := http.ListenAndServe(":9090", nil)
+	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		panic(err)
 	}
