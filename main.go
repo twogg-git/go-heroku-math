@@ -11,7 +11,7 @@ import (
 func main() {
 	http.HandleFunc("/", statTest)
 	fmt.Println("listening...")
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":9090", nil)
 	if err != nil {
 		panic(err)
 	}
@@ -19,14 +19,21 @@ func main() {
 
 func statTest(res http.ResponseWriter, req *http.Request) {
 
-	fmt.Fprintln(res, "Testing , gonum/stat fuctions")
+	fmt.Fprintln(res, "----------------")
+	fmt.Fprintln(res, "From nil to wow!")
+	fmt.Fprintln(res, "----------------")
+	fmt.Fprintln(res, "")
+	fmt.Fprintln(res, "Testing gonum/stat fuctions...")
 
-	poolSize := 100000
+	poolSize := 1000000
 	fmt.Fprintln(res, "Pool size", poolSize)
+
+	const randLimit int = 2500
+	fmt.Fprintln(res, "Random limit", randLimit)
 
 	var dataPool = make([]float64, poolSize)
 	for i := 0; i < poolSize; i++ {
-		dataPool[i] = rand.Float64()
+		dataPool[i] = float64(rand.Intn(randLimit)) + rand.Float64()
 	}
 
 	// stat.Mean only calculates over []float64 arrays
@@ -40,4 +47,5 @@ func statTest(res http.ResponseWriter, req *http.Request) {
 	for i := 0; i < len(dataPool); i++ {
 		fmt.Println(dataPool[i])
 	}*/
+
 }
