@@ -48,4 +48,6 @@ func statTest(res http.ResponseWriter, req *http.Request) {
 		fmt.Println(dataPool[i])
 	}*/
 
+	//https://raw.githubusercontent.com/twogg-git/go-math/master/xbar1.png
+
 }
