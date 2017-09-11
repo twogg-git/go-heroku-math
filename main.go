@@ -8,7 +8,7 @@ import (
 	"github.com/gonum/stat"
 )
 
-func main() {
+func runweb() {
 	http.HandleFunc("/", statTest)
 	fmt.Println("listening...")
 	err := http.ListenAndServe(":8080", nil)
