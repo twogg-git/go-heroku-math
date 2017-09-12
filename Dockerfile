@@ -1,6 +1,6 @@
 FROM golang
 
-ADD /main.go /go/src/gomath/
+ADD /char.go /go/src/gomath/
 
 WORKDIR /go/src/gomath/
 
