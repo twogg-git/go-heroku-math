@@ -12,9 +12,11 @@ import (
 	"github.com/vdobler/chart"
 )
 
-func main() {
+const poolSize int = 250
+
+func chartmain() {
 	fmt.Println("Starting server...")
-	poolSize := 250
+
 	drawBar(randomXAxis(poolSize), initPool(poolSize))
 	http.HandleFunc("/", calltemplate)
 	http.ListenAndServe(":3001", nil)
