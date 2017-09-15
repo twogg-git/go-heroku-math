@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -18,7 +17,7 @@ func webmain() {
 	}
 }
 
-func manageIndex(w http.ResponseWriter, r *http.Request) {
+func manageIndex1(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm() //Parse url parameters and body
 	///formPrm := r.Form
 	fmt.Fprintln(w, "Hello HTTP test")
@@ -32,7 +31,7 @@ func manageIndex(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func manageLogin(w http.ResponseWriter, r *http.Request) {
+func manageLogin2(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("method:", r.Method) //get request method
 	if r.Method == "GET" {
 		t, _ := template.ParseFiles("login.gtpl")
