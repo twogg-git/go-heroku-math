@@ -1,3 +1,4 @@
+
 package main
 
 import (
@@ -8,7 +9,7 @@ import (
 	"strings"
 )
 
-func main() {
+func webmain() {
 	http.HandleFunc("/", manageIndex)
 	http.HandleFunc("/login", manageLogin)
 	err := http.ListenAndServe(":3001", nil)
