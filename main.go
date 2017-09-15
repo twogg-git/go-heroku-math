@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -21,6 +20,7 @@ func main() {
 func manageIndex(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm() //Parse url parameters and body
 	///formPrm := r.Form
+    fmt.Fprintln(w, "Finally some work done!")
 	fmt.Fprintln(w, "Hello HTTP test")
 	fmt.Fprintln(w, "URL.Path", r.URL.Path)
 	fmt.Fprintln(w, "URL parameters", r.Form)
@@ -45,3 +45,12 @@ func manageLogin(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, strings.Join([]string{"Hello ", username, "!"}, ""))
 	}
 }
+
+func manageSecondPage(w http.ResponseWriter, r *http.Request ){
+   fmt.Println("ahora aqui")
+}
+
+
+
+
+
